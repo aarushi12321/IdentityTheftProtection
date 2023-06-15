@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.backg {
+    width: 200%;
+    height: 100vh;
+    background-color: #d2d2d2;
+}
+
+.navbar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #194569;
+}
+
+.navbar ul li:first-child {
+    margin: 0 0 0 720px;
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    background-color: #194569;
+    padding: 25px 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #194569;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+    background: #5F84A2;
+}
+
+.navbar ul li:hover {
+    background: #5F84A2;
+}
+
+.navbar ul li a:hover {
+    color: #194569;
+}
+
+.navbar ul li a:visited::after {
+    width: 100%;
+    background: #5F84A2;
+    color: #194569;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.drop-container {
+    padding: 30px;
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 10px;
+    border: none;
+    background: #194569;
+    padding: 20px 45px;
+    border-radius: 35px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+input[type=file]::file-selector-button:hover {
+    background: #0d45a5;
+  }
+
+input[type=submit] {
+    margin-left: 30px;
+    border: none;
+    background: #194569;
+    padding: 20px 45px;
+    border-radius: 35px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+input[type=submit]:hover {
+    background: #0d45a5;
+  }
+
+.content h3 {
+    padding: 30px 30px 0 30px;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.result p{
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+#user-id-input {
+    text-align: right;
+    margin-left: auto;
+}

@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.backg {
+    width: 100%;
+    background-color: #d2d2d2;
+    height: 225vh;
+}
+
+.Top-panel {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #194569;
+}
+
+.Top-panel ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    background-color: #194569;
+    padding: 15px 30px;
+    color: white;
+}
+
+.Top-panel ul li:first-child {
+    margin: 0 250px 0 550px;
+}
+
+#heading {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.input-user-id{
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+#submit-button{
+    border: none;
+    background: #194569;
+    padding: 15px 40px;
+    margin: 0 15px;
+    border-radius: 35px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+#submit-button:hover {
+    background: #0d45a5;
+  }
+
+#user_id {
+    height: 30px;
+    width: 200px;
+  }
+
+#label-text {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+
+#plot{
+    margin: 0 40px 50px 60px;
+    padding-right: 20px;
+    border: #194569 1px solid;
+    display: flex;
+}
+
+#plot-2{
+    margin: 0 40px 50px 60px;
+    padding-right: 20px;
+    border: #194569 1px solid;
+}
+
+#plot-3{
+    margin: 0 40px 50px 60px;
+    padding-right: 20px;
+    border: #194569 1px solid;
+}
+
+.button-1{
+    background-color: #194569;
+    margin-left: 61px;
+    width: 220px;
+    padding: 15px 0;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.button-2{
+    background-color: #194569;
+    margin-left: 61px;
+    width: 240px;
+    padding: 15px 0;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.button-3{
+    background-color: #194569;
+    margin-left: 61px;
+    width: 240px;
+    padding: 15px 0;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+#js-plotly-tester{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.result_p{
+    background-color: #d2d2d2;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.result_p p{
+    color: #194569;
+}
+
+.lds-roller {
+    display: none;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #194569;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
