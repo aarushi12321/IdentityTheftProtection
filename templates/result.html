@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"> 
+
+    <script>
+      function redirectToDash() {
+          window.open('/dash_app', "_blank");
+      }
+    </script>
+</head>
+
+<body>
+  
+  <div class="backg">
+
+    <div class="login">
+
+      <div class="navbar">
+        <ul>
+          <li> <a href="http://127.0.0.1:5000/">Predict</a></li>
+          <li> <a href="#" onclick="redirectToDash()", target="blank" >Dashboard</a></li>
+          <li> <a href="{{ url_for('go_to_app_2') }}", target="_blank">Forecast</a></li>
+          <li> <a href="#">Project</a></li>
+          <li> <a href="#">About Us</a></li>
+        </ul>
+
+      </div>
+
+      <div class="content">
+        <h1>ELECTRICITY THEFT PREDICTION</h1>
+
+        <h3>RESULT</h3>
+        <p>{{fl_val}}</p>
+        <br>
+        <p>USER ID: {{userid}} </p>
+
+        <div class="result">
+          {% if result == 'Malicious user data' %}
+            <p class="blink red">{{ result }}</p>
+          {% else %}
+            <p class="green">{{ result }}</p>
+          {% endif %}
+        </div>
+
+        <p>Click the Dashboard tab to see user data.</p>
+        </div>
+    
+     </div>
+  </div> 
+ </body>
+ </html>

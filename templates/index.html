@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"> 
+
+    <script>
+      function redirectToDash() {
+          window.open('/dash_app', "_blank");
+      }
+    </script>
+</head>
+
+<body>
+  
+  <div class="backg">
+
+    <div class="login">
+
+      <div class="navbar">
+        <ul>
+          <li> <a href="#">Predict</a></li>
+          <li> <a href="#" onclick="redirectToDash()", target="blank" >Dashboard</a></li>
+          <li> <a href="{{ url_for('go_to_app_2') }}", target="_blank">Forecast</a></li>
+          <li> <a href="#">Project</a></li>
+          <li> <a href="#">About Us</a></li>
+        </ul>
+
+      </div>
+
+      <div class="content">
+        <h1>ELECTRICITY THEFT PREDICTION</h1>
+        <p> Upload user's file to detect whether the user is malicious or not.</p>
+
+        <div class="drop-container">
+          <form method='POST' enctype='multipart/form-data'>
+            {{form.hidden_tag()}}
+            {{form.file()}}
+            {{form.submit()}}
+        
+          </form>
+        </div>
+      </div>
+    
+     </div>
+  </div> 
+ </body>
+ </html>

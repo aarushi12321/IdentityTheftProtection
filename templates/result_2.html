@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Forecast</title>
+    <link href="{{ url_for('static', filename='styles_2.css') }}" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <div class="backg">
+        <div class="Top-panel">
+            <ul id="heading">
+                <li>Forecasting result</li>
+            </ul>
+        </div>
+
+        <div class="input-user-id">
+            <form method="POST" action="/submit">
+                <label for="user_id" id="label-text">Enter user ID:</label>
+                <input type="text" id="user_id" name="user_id">
+                <button type="submit" value="Submit" id="submit-button">Submit</button>
+            </form>
+        </div>
+
+        <div class="button-1">
+            <p>Energy Consumption vs Time</p>
+        </div>
+
+        <div id="plot"></div>
+        <script>
+            var fig = JSON.parse({{ fig_json | safe }});
+            Plotly.newPlot('plot', fig.data, fig.layout);
+        </script>
+
+        <div class="button-2">
+            <p>Ind. Energy Consumption vs Time</p>
+        </div>
+        <div id="plot-2"></div>
+        <script>
+            var fig = JSON.parse({{ fig_json_2 | safe }});
+            Plotly.newPlot('plot-2', fig.data, fig.layout);
+        </script>
+
+        <div class="button-3">
+            <p>Uncertainty Quantification</p>
+        </div>
+
+        <script>
+                var fig_json_3 = {{ fig_json_3 | safe }}
+        </script>
+
+        <script>
+        // Get the last element inside the div
+        var lastElement = document.getElementById("backg").lastElementChild;
+
+        // Get the position of the last element relative to the top of the div
+        var lastElementPosition = lastElement.offsetTop + lastElement.offsetHeight;
+
+        // Set the height of the div to the position of the last element
+        document.getElementById("backg").style.height = lastElementPosition + "px";
+        </script>
+    </div>
+
+    <div class="result_p">
+        <p>{{rs}}</p>
+    </div>
+    
+</body>
+
+</html>

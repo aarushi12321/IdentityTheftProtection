@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Forecast</title>
+        <link href="{{ url_for('static', filename='styles_2.css') }}" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <div class="backg">
+            <div class="Top-panel">
+                <ul id="heading">
+                    <li>Forecasting</li>
+                </ul>
+            </div>
+
+            <div class="input-user-id">
+                <form method="POST" action="/submit" id="forecast-form">
+                    <label for="user_id" id="label-text">Enter user ID:</label>
+                    <input type="text" id="user_id" name="user_id">
+                    <button type="submit" value="Submit" id="submit-button">Submit</button>
+                </form>
+                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+            
+        </div>
+        <script>
+            const formElement = document.getElementById("forecast-form");
+            formElement.addEventListener('submit',function(){
+                document.getElementsByClassName('lds-roller')[0].style.display = 'inline-block';
+                formElement.submit();
+            })
+        </script>
+    </body>
+</html>
+
