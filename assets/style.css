@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Main {
+    width: 100%;
+    height: 120vh;
+    background-color: #d2d2d2;
+}
+
+.Top-panel {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #194569;
+}
+
+
+.Top-panel ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    background-color: #194569;
+    padding: 15px 30px;
+    color: white;
+}
+
+.Top-panel ul li:first-child {
+    margin: 0 250px 0 550px;
+}
+#heading {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#last-updated {
+    text-transform: uppercase;
+}
+
+.info-class div{
+    display: inline-block;
+    padding: 30px 80px;
+
+}
+
+.info-class div:first-child{
+    margin: 0 0 0 15px;
+}
+
+.info-tab {
+    text-align: center;
+    background-color: #c1c0c0;
+}
+
+.info-tab H3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #194569;
+}
+
+.info-tab p {
+    font-size: 50px;
+}
+
+.last-update {
+    margin: 20px 0 0 1170px;
+}
+
+.total {
+    color: #194569;
+}
+
+.benign p{
+    color: green;
+}
+
+.malicious p{
+    color: red;
+}
+
+#total-energy-graph {
+    margin: 0 0 0 80px;
+    width: 90vw;
+    background-color: #c1c0c0;
+    border: #194569 1px solid;
+}
+
+#ben-energy-graph {
+    margin:0 0 0 80px;
+    width: 90vw;
+    background-color: #c1c0c0;
+    border: #194569 1px solid;
+}
+
+#mal-energy-graph {
+    margin:0 0 0 80px;
+    width: 90vw;
+    background-color: #c1c0c0;
+    border: #194569 1px solid;
+}
+
+#user-eneergy-graph{
+    margin:0 0 0 80px;
+    width: 90vw;
+    background-color: #c1c0c0;
+    border: #194569 1px solid;
+    margin-top: 30px;
+}
+
+#button-1 {
+    margin: 0 0 0 80px;
+}
+
+.graph-buttons ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.graph-buttons button {
+    background-color: #194569;
+    color: white;
+    margin-left: 1px ;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.graph-buttons button:focus, button:active{
+    background-color: #d2d2d2;
+    border: 1px solid #194569;
+    color: #194569;
+}
+
+.rev-class{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-around;
+}
+
+.user-div {
+    background-color: #d2d2d2;
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.user-div p{
+    background-color: #d2d2d2;
+    margin: 20px 150px 5px 150px;
+    text-transform: uppercase;
+    color: #194569;
+}
+
+.user-div p:first-child{
+    margin-left: 500px;
+    font-weight: bold;
+}
